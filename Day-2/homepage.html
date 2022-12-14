@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMeck-Help You To Grow</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      #navbar {
+        display: flex;
+        /* flex-direction: column; */
+        width: 100%;
+        background-color: aqua;
+        /* height: 100px; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        border: 2px solid red;
+      }
+      .left {
+        /* border: 2px solid red; */
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        top: 20px;
+      }
+      .left img {
+        width: 75px;
+        filter: invert(100%);
+      }
+
+      .a {
+        /* border: 2px solid red; */
+        line-height: 10px;
+        text-align: center;
+        /* width: 100px;
+  border-radius: 50%;
+   */
+        color: red;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      /* for center navigation bar  */
+      .midd {
+        display: block;
+        /* flex-direction: column; */
+        width: 80%;
+        /* width: 33%;
+        margin: 2px auto; */
+        /* border: 2px solid blue; */
+      }
+      .navbar {
+        display: inline-block;
+      }
+      .navbar li {
+        display: inline-block;
+        font-size: 15 px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: bold;
+      }
+      .navbar li a {
+        
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+      
+      .navbar li a:hover,
+      .navbar li a.activ {
+        text-decoration: underline;
+        color: red;
+      }
+
+      /* for light side are  */
+      .right {
+        /* border: 2px solid yellow; */
+        display: inline-block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+      /* .btn {
+        margin: 0px 6px;
+        background-color: black;
+        color: rgb(208, 20, 20);
+        padding: 4px 14px;
+        border: 2px solid red;
+        border-radius: 8px;
+        font-size: 15px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        cursor: pointer;
+      } */
+      /* .btn:hover {
+        background-color: rgb(241, 240, 235);
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="navbar">
+        <!-- <header id="header">
+          <nav id="nav">
+            <div id="logo">
+              <img
+                src="https://i.pinimg.com/736x/6b/36/ad/6b36ad874ad3300b38957968438337e7--logo-type-logo-s.jpg"
+                alt=""
+              />
+              <h3>TMeck</h3>
+            </div>
+            <div id="menu">
+              <a href="#">Why TMeck</a>
+              <a href="#">App & Integration</a>
+              <a href="#">Pricing</a>
+              <a href="#">Support</a>
+              <a href="#">Blog</a>
+            </div>
+            <div id="sing">
+                <button>Sing Up</button>
+                <button>Sing In</button>
+            </div>
+          </nav>
+        </header> -->
+        <header class="header">
+          <!-- for left logo  -->
+          <div class="left">
+            <img src="gym5.jpg.png" alt="" />
+            <div class="a">TMeck</div>
+          </div>
+          <!-- for center navigation bar  -->
+          <div class="midd">
+            <ul class="navbar">
+              <li class="item"><a href="#">Why TMeck</a></li>
+              <li class="item"><a href="#">App & Integration</a></li>
+              <li class="item"><a href="#">Pricing</a></li>
+              <li class="item"><a href="#">Support</a></li>
+              <li class="item"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <!-- for light side are  -->
+          <div class="right">
+            <button>Sing Up</button>
+            <button>Sing In</button>
+          </div>
+        </header>
+      </div>
+    </div>
+  </body>
+</html>
