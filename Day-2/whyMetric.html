@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #best_time {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        margin: auto;
+        margin-top: 30px;
+        /* border: 2px solid black; */
+
+      }
+     
+      #cont {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 80%;
+        /* border: 2px solid red; */
+      }
+      #all h1 {
+        text-align: center;
+        /* margin-top: 20px; */
+        /* margin-bottom: 20px; */
+      }
+      .sun {
+        display: flex;
+        /* border: 2px solid rgb(240, 240, 240); */
+        border-radius: 10px;
+        /* text-align: center; */
+        width:100%;
+      }
+      .sun p {
+        margin-top: 20px;
+      }
+      .sun img {
+        width: 80px;
+        height: 80px;
+        color:  #e2e7eb;
+        /* background-color:#e2e7eb ; */
+      }
+      * a {
+        text-decoration: none;
+        color: #000;
+      }
+      a:hover {
+        cursor: pointer;
+        color: #3070f0;
+      }
+      #hed{
+        /* border: 2px solid red; */
+        width: 55%;
+      }
+      #uper{
+        /* border: 2px solid rgb(21, 43, 238); */
+        width: 15%;
+      }
+      #hed>h2{
+        color:  #a8afb4;
+      }
+      #uper>h2{
+        color:  #a8afb4;
+      }
+      @media all and (max-width: 900px) and (min-width: 600px) {
+        #best_time {
+        display: flex;
+        flex-direction: column;
+        }
+        #cont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        }
+
+        #hed{
+        /* border: 2px solid red; */
+        width: 100%;
+      }
+      #uper{
+        /* border: 2px solid rgb(21, 43, 238); */
+        width: 100%;
+      }
+      }
+
+      @media all and (max-width: 601px) and (min-width: 200px) {
+        #best_time {
+        display: flex;
+        flex-direction: column;
+        }
+
+        #cont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        }
+        #hed{
+        /* border: 2px solid red; */
+        width: 100%;
+      }
+      #uper{
+        /* border: 2px solid rgb(21, 43, 238); */
+        width: 100%;
+      }
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div id="all">
+      <h1>Need of TMetric for your business</h1> 
+      
+      <div id="best_time">
+        
+        <div id="uper">
+            <h2>Overview</h2>
+        <div id="img1">
+            <div class="sun" id="sun1">
+               
+                <div>
+                  <a href="https://tmetric.com/solutions"> <h2>Industry
+                   
+                    </h2></a>
+  
+                  <p id="p1">
+                    Made for all industries. Check benefits of usage
+                   
+                    
+                  </p>
+                </div>
+              </div>
+            <div class="sun" id="sun1">
+               
+                <div>
+                  <a href="https://tmetric.com/customer-stories"> <h2> Customers</h2></a>
+  
+                  <p id="p1">
+                    See why business use TMetric for time tracking and workflow management
+                  </p>
+                </div>
+              </div>
+          <!-- <img
+              id="image1"
+              src="https://tmetric.com/media/1kxfndjp/img-advantages.svg"
+              alt=""
+            /> -->
+            <!-- <h1>main hu na</h1> -->
+        </div>
+    </div>
+
+        <div id="hed">
+          <h2>Features</h2>
+          <div id="cont">
+            <div class="sun" id="sun1">
+              <div>
+                <img
+                  src="https://tmetric.com/media/2p4n4oyc/icon-timer-blue.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <a href="https://tmetric.com/feature-time-tracking"> <h2>Time Tracking</h2></a>
+
+                <p id="p1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facere, ad delectus voluptate laborum
+                </p>
+              </div>
+            </div>
+            <div class="sun" id="sun2">
+              <div>
+                <img
+                  src="https://tmetric.com/media/1niddz51/icon-project-blue.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <a href="https://tmetric.com/feature-projects"><h2>Project Management</h2></a>
+                <p id="p2">
+                  Lorem ipsum dolor sit amet consectetur. ipsum dolor sit amet
+                  consectetur.
+                </p>
+              </div>
+            </div>
+            <div class="sun" id="sun3">
+              <div>
+                <img
+                  src="https://tmetric.com/media/2gxihhdu/icon-team-blue.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <a href="https://tmetric.com/feature-team-management"><h2>Team Management</h2></a>
+                <p id="p3">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Quibusdam excepturi iure repellat quis, sunt voluptates dicta?
+                </p>
+              </div>
+            </div>
+
+            <div class="sun" id="sun4">
+              <div>
+                <img
+                  src="https://tmetric.com/media/s4koycnp/icon-invoice-blue.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <a href="https://tmetric.com/feature-billing"> <h2>Billing & Invoicing</h2></a>
+                <p id="p4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Inventore dicta voluptatum quidem amet porro tempora?
+                </p>
+              </div>
+            </div>
+            <div class="sun" id="sun5">
+              <div>
+                <img
+                  src="https://tmetric.com/media/yoblhiut/icon-reports-blue.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <a href="https://tmetric.com/task-management"><h2>Reporting</h2></a>
+                <p id="p5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Neque, beatae ipsa? Nihil sint esse odit, quidem sit
+                  assumenda.
+                </p>
+              </div>
+            </div>
+            <div class="sun" id="sun6">
+              <div>
+                <img
+                  src="https://tmetric.com/media/cajpa4uy/icon-time-off-blue.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <a href="https://tmetric.com/feature-time-off"><h2>Time Off</h2></a>
+                <p id="p6">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Magnam voluptatibus molestias ipsum exercitationem praesentium
+                  aperiam nobis numquam sapiente quod.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script></script>
+</html>
