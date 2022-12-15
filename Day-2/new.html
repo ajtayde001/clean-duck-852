@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-101 C2</title>
+    <style>
+      /* HEADER+++++++++++++++++++++++++++++++++ */
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      * a {
+        text-decoration: none;
+        color: #000;
+      }
+      body {
+        font-family: Helvetica;
+        margin: 0;
+      }
+      #menubar {
+        width: 100%;
+        display: inline-block;
+        position: fixed;
+        background-color: rgb(249, 236, 156);
+      }
+
+      :root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --grey: #85888C;
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+ul li{
+ 
+    font-weight: bold;
+
+}
+/* Header */
+.header{
+  
+   
+    position: sticky;
+    top: 0;
+    height: 100;
+    width: 100%;
+}
+
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+
+}
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+.signupBtn{
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75%;
+    min-width: 800px;
+  
+
+}
+.bb_button {
+    border:2px solid #3070F0; 
+    text-decoration: none;
+    border-radius: 12px;
+   height: 20;
+    z-index: 1;
+  }
+  .bb_button:before, .bb_button:after {
+    content: '';
+    background: #15315A;
+    position: absolute;
+    z-index: -1;
+    transition: transform .2s ease-in-out;
+  }
+  bb_button:hover .bb_button__text {
+    opacity: 1;
+
+  }
+  .bb_button:hover {
+    background-color: #3070F0;
+    color: #fff;
+    font-style: bold;
+  }
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    
+}
+
+.menu a{
+    
+    display: block;
+    padding: 30px;
+    /* color: white; */
+    /* color: var(--black); */
+    background-color: rgb(249, 236, 156);
+
+}
+
+.menu a:hover{
+    background-color: var(--grey);
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+.hamb-line {
+    background: var(--black);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--black);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* Responsiveness */
+
+@media (min-width: 900px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        /* background-color: transparent; */
+
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--grey);
+        
+    }
+    
+    .hamb{
+        display: none;
+    }
+      
+  
+
+
+}
+
+      /* Write all necessery styles here  */
+
+      #container {
+        /* font-size: 45px; */
+        background-color: rgb(249, 236, 156);
+      }
+      /* for top++++++++++++++++++++++++ */
+      #top {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin: auto;
+        /*  */
+      }
+      #heading {
+        margin-top: 150px;
+        margin: left 10px;
+        /* text-align: center; */
+        width: 40%;
+      }
+      #heading input {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      #heading > div {
+        /* display: flex; */
+        margin-top: 20px;
+      }
+      #heading input {
+        margin-top: 20px;
+      }
+      #heading button {
+        margin-top: 20px;
+        color: white;
+        background-color: rgb(64, 111, 239);
+        width: 130px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      #imeg {
+        text-align: center;
+        width: 70%;
+        margin-top: 60px;
+      }
+
+      #imeg img {
+        width: 100%;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      /*HAMBURGER MENU*/
+
+      .hamburger {
+        display: none;
+
+        font-size: 24px;
+
+        user-select: none;
+      }
+      /* <!-- 3rd Take effective control */
+      #for_img {
+        /* display: flex; */
+
+        width: 70%;
+        margin: auto;
+        margin-top: 30px;
+      }
+      #for_img img {
+        margin-left: 20px;
+      }
+
+      #best_time {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        margin: auto;
+        margin-top: 30px;
+      }
+      #img1 {
+        text-align: center;
+        width: 50%;
+      }
+
+      #img1 img {
+        width: 100%;
+      }
+      #cont {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        width: 30%;
+        /* border: 2px solid red; */
+      }
+      #all h1 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .sun {
+        border: 2px solid rgb(240, 240, 240);
+        border-radius: 10px;
+        /* text-align: center; */
+        width: 100%;
+      }
+      .sun p {
+        margin-top: 20px;
+      }
+
+      .sun:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      /* 4th part+++++++++++++++++++++++++++++++++++++ */
+      #top2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        margin: auto;
+        /* border: 2px solid red; */
+        margin-top: 50px;
+        background-color: #f6f7f8;
+        /*  */
+      }
+      #heading2 {
+        margin-top: 20px;
+        /* margin: left 10px; */
+        margin-left: 30px;
+        /* text-align: center; */
+        width: 50%;
+      }
+
+      #heading2 h1 {
+        margin-bottom: 20px;
+        font-size: 50px;
+      }
+      #heading2 li {
+        margin-bottom: 10px;
+      }
+
+      #heading2 button {
+        margin-top: 20px;
+        color: white;
+        background-color: rgb(64, 111, 239);
+        width: 130px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      #imeg2 {
+        margin-top: 50px;
+        text-align: center;
+        width: 50%;
+      }
+
+      #imeg2 img {
+        width: 100%;
+      }
+
+      /* 4th part+++++++++++++++++++++++++++++++++++++ */
+      #top3 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        margin: auto;
+        /* border: 2px solid red; */
+        margin-top: 50px;
+        /* background-color: #F6F7F8; */
+        /*  */
+      }
+      #heading3 {
+        margin-top: 20px;
+        /* margin: left 10px; */
+        margin-left: 30px;
+        /* text-align: center; */
+        width: 50%;
+      }
+
+      #heading3 h1 {
+        margin-bottom: 20px;
+        font-size: 50px;
+      }
+      #heading3 li {
+        margin-bottom: 10px;
+      }
+
+      #heading3 button {
+        margin-top: 20px;
+        color: white;
+        background-color: rgb(64, 111, 239);
+        width: 130px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      #imeg3 {
+        margin-top: 50px;
+        text-align: center;
+        width: 50%;
+      }
+
+      #imeg3 img {
+        width: 100%;
+      }
+
+      #lastm {
+        background-color: rgb(102, 49, 195);
+        height: 300px;
+        text-align: center;
+      }
+
+      #lastm button {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: black;
+        background-color: white;
+        width: 130px;
+        height: 33px;
+        border: none;
+        border-radius: 5px;
+      }
+      #lastm > h1 {
+        /* margin-bottom: 90px; */
+        /* color: red; */
+        font-size: 55px;
+      }
+
+      .center {
+        display: grid;
+        /* flex-direction: row; */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        width: 100%;
+        /* justify-content: space-evenly; */
+        margin: auto;
+        background-color: #e2e7eb;
+        margin-top: 40px;
+        height: 450px;
+        /* text-align: center; */
+        /*  */
+      }
+      .foot {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        /* justify-content: space-between; */
+        margin: auto;
+        /*  */
+      }
+      .center > p {
+        text-align: center;
+      }
+      .center a:hover{
+        cursor: pointer;
+
+      }
+
+      /* for medium querise+++++++++++++++ */
+      @media all and (max-width: 900px) and (min-width: 600px) {
+        #top {
+          flex-direction: column;
+        }
+        #top > #imeg {
+          width: 100%;
+        }
+        #top > #heading {
+          width: 100%;
+          /* margin-left: 30%; */
+          text-align: center;
+        }
+
+        /* input[type="checkbox"]:checked ~ #site-header {
+          display: block;
+        }
+
+        .hamburger {
+          display: block;
+        } */
+
+        #best_time {
+          display: flex;
+          flex-direction: column;
+          /* background-color: aqua; */
+        }
+        #best_time > #img1 {
+          width: 100%;
+        }
+        #best_time > #cont {
+          width: 100%;
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        #top2 {
+          flex-direction: column;
+        }
+        #top2 > #imeg2 {
+          width: 100%;
+        }
+        #top2 > #heading2 {
+          width: 90%;
+          /* margin-left: 30%; */
+          /* text-align: center; */
+        }
+        #top3 {
+          flex-direction: column;
+        }
+        #top3 > #imeg3 {
+          width: 100%;
+        }
+        #top3 > #heading3 {
+          width: 90%;
+          /* margin-left: 30%; */
+          /* text-align: center; */
+        }
+      }
+      /* for small queises++++++++++++++++++++ */
+      @media all and (max-width: 601px) and (min-width: 200px) {
+        #top {
+          flex-direction: column;
+        }
+        #top > #imeg {
+          width: 100%;
+        }
+        #top > #heading {
+          width: 100%;
+          margin-right: 10%;
+          text-align: center;
+        }
+
+        #best_time {
+          display: flex;
+          flex-direction: column;
+          /* background-color: aqua; */
+        }
+        #best_time > #img1 {
+          width: 100%;
+        }
+        #best_time > #cont {
+          width: 100%;
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        #top2 {
+          flex-direction: column;
+        }
+        #top2 > #imeg2 {
+          width: 100%;
+        }
+        #top2 > #heading2 {
+          width: 90%;
+          /* margin-left: 30%; */
+          /* text-align: center; */
+        }
+        #top3 {
+          flex-direction: column;
+        }
+        #top3 > #imeg3 {
+          width: 100%;
+        }
+        #top3 > #heading3 {
+          width: 90%;
+          /* margin-left: 30%; */
+          /* text-align: center; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <!----header--->
+      <div id="menubar">
+        <header class="header">
+      <!-- Logo -->
+      <img class="logo" src="logi.svg"/>
+
+      <!-- Hamburger icon -->
+      <input class="side-menu" type="checkbox" id="side-menu"/>
+      <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+      <!-- Menu -->
+      <nav class="nav">
+       
+          <ul class="menu">
+         
+            <li><a href="#"><span>Why TMetric</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></li> 
+            <li><a href="#"><span>Apps &amp; Integrations</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></li> 
+            <li><a href="#">Pricing</a></li> 
+            <li><a href="#">Support</a></li> 
+            <li><a href="#">Blog</a></li> 
+            
+            <li class="nav-item">
+              <a class="nav-link login" href="https://app.tmetric.com/login">Log In</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="bb_button"><span class="bb_button__text">Sign Up</span></a>
+              <!-- <a class="signupBtn" href="https://app.tmetric.com/register">Sign Up</a> -->
+          </li>
+          </ul>
+         
+      </nav>
+  </header>
+      </div>
+      <!-- main contIN++++++++++++++++++++++++ -->
+
+      <div id="top">
+        <div id="heading">
+          <h1>Empower your Team with Time Tracking</h1>
+          <p>
+            TMetric streamlines your team work so you can focus on what matters
+          </p>
+          <input type="email" placeholder="Enter Your Email Adress" />
+          <div>
+            <button>Get Staretd</button>
+            <p>Fully Functional 30-Day Trial</p>
+          </div>
+        </div>
+        <div id="imeg">
+          <img
+            src="https://tmetric.com/media/nb3imgh0/img-home-heading.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="for_img">
+      <img
+        src="https://tmetric.com/media/zlalggkp/saasworthy_2021_main_page.png"
+        alt=""
+      />
+      <img
+        src="https://tmetric.com/media/w4mhgaul/time-tracking-software.png"
+        alt=""
+      />
+      <img
+        src="https://tmetric.com/media/mg3fi1e4/crozdesk_2022_main_page.png"
+        alt=""
+      />
+      <img
+        src="https://tmetric.com/media/c2eewysw/g2_2022_main_page.png"
+        alt=""
+      />
+      <img
+        src="https://tmetric.com/media/cwnfzugf/icon-capterra-shortlist.png"
+        alt=""
+      />
+      <img
+        src="https://tmetric.com/media/psxgf3r4/icon-software-advice-frontrunners.png"
+        alt=""
+      />
+    </div>
+    <!-- 3rd Take effective control+++++++++++++++++++++++++++++++++ -->
+    <div id="all">
+      <h1>Best time tracking features for your business</h1>
+      <div id="best_time">
+        <div id="img1">
+          <img
+            id="image1"
+            src="https://tmetric.com/media/1kxfndjp/img-advantages.svg"
+            alt=""
+          />
+        </div>
+        <div id="cont">
+          <div class="sun" id="sun1">
+            <img
+              src="https://tmetric.com/media/2p4n4oyc/icon-timer-blue.svg"
+              alt=""
+            />
+            <h2>Time Tracking</h2>
+            <p id="p1"></p>
+          </div>
+          <div class="sun" id="sun2">
+            <img
+              src="https://tmetric.com/media/1niddz51/icon-project-blue.svg"
+              alt=""
+            />
+            <h2>Project Management</h2>
+            <p id="p2"></p>
+          </div>
+          <div class="sun" id="sun3">
+            <img
+              src="https://tmetric.com/media/2gxihhdu/icon-team-blue.svg"
+              alt=""
+            />
+            <h2>Team Management</h2>
+            <p id="p3"></p>
+          </div>
+          <div class="sun" id="sun4">
+            <img
+              src="https://tmetric.com/media/s4koycnp/icon-invoice-blue.svg"
+              alt=""
+            />
+            <h2>Billing & Invoicing</h2>
+            <p id="p4"></p>
+          </div>
+          <div class="sun" id="sun5">
+            <img
+              src="https://tmetric.com/media/yoblhiut/icon-reports-blue.svg"
+              alt=""
+            />
+            <h2>Reporting</h2>
+            <p id="p5"></p>
+          </div>
+          <div class="sun" id="sun6">
+            <img
+              src="https://tmetric.com/media/cajpa4uy/icon-time-off-blue.svg"
+              alt=""
+            />
+            <h2>Time Off</h2>
+            <p id="p6"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4th part+++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <div id="top2">
+      <div id="heading2">
+        <h1>Take effective control of working time</h1>
+        <ul>
+          <li>timekeeping</li>
+          <li>sites and apps monitoring</li>
+          <li>activity tracking</li>
+          <li>screenshots capturing</li>
+          <li>task management</li>
+          <li>50+ integrations</li>
+          <li>work schedule</li>
+        </ul>
+        <div>
+          <button>Start Free Trial</button>
+        </div>
+      </div>
+      <div id="imeg2">
+        <img
+          src="https://tmetric.com/media/kssowlxe/img-activity-cases.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- 5th part+++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <div id="top3">
+      <div id="heading3">
+        <h1>Achieve high profitability by using time tracker</h1>
+        <ul>
+          <li>project management</li>
+          <li>project budgeting</li>
+          <li>billing and invoicing</li>
+          <li>accurate payroll</li>
+          <li>detailed reports</li>
+        </ul>
+        <div>
+          <button>Start Free Trial</button>
+        </div>
+      </div>
+      <div id="imeg3">
+        <img
+          src="https://tmetric.com/media/lltfuaaz/img-report-cases-svg.svg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- 6th part+++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <div id="lastm">
+      <h1>Make time work for you!</h1>
+      <div>
+        <button>Start Free Trial</button>
+      </div>
+      <p>Powered by A software vendor with 20 years of experience.</p>
+    </div>
+
+    <footer>
+      <div class="center">
+        <div class="foot">
+          <h3>Application</h3>
+          <a href="#">Desktop</a>
+          <a href="#">ios</a>
+          <a href="#">Android</a>
+        </div>
+        <div class="foot">
+          <h3>Browser Extensions</h3>
+          <a href="#">chrom</a>
+          <a href="#">firefox</a>
+          <a href="#">opera</a>
+        </div>
+        <div class="foot">
+          <h3>Resources</h3>
+          <a href="#">Solutions </a>
+          <a href="#"> Integrations</a>
+          <a href="#"> Help</a>
+          <a href="#"> Time Trackers Comparison</a>
+          <a href="#"> Blog</a>
+        </div>
+        <div class="foot">
+          <h3>About</h3>
+          <a href="#">About TMetric </a>
+          <a href="#">Terms of Service</a>
+          <a href="#"> Privacy Policy</a>
+          <a href="#"> Cookies Policy</a>
+        </div>
+
+        <p>copyright & copy;www.Tmetric.com all rights reserved!</p>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    let div1 = document.getElementById("sun1");
+    let div2 = document.getElementById("sun2");
+    let div3 = document.getElementById("sun3");
+    let div4 = document.getElementById("sun4");
+    let div5 = document.getElementById("sun5");
+    let div6 = document.getElementById("sun6");
+    let pera = document.getElementById("p1");
+    let pera2 = document.getElementById("p2");
+    let pera3 = document.getElementById("p3");
+    let pera4 = document.getElementById("p4");
+    let pera5 = document.getElementById("p5");
+    let pera6 = document.getElementById("p6");
+    // let pera=document.getElementById("p")
+    let image1 = document.getElementById("img1");
+    // pera=document.querySelectorAll("p")
+    div1.addEventListener("click", () => {
+      image1.innerHTML = null;
+      pera2.innerHTML,
+        pera3.innerHTML,
+        pera4.innerHTML,
+        pera5.innerHTML,
+        (div6.innerHTML = null);
+      div1.style.background = "#e7edfc";
+      div1.style.borderColor = "#3070f0";
+      pera.innerText =
+        "With TMetric, you can easily track time on tasks and projects, create time entries, capture billable hours, and save time on paperwork when it comes to generating time reports. Dive into a detailed overview of the time utilization and precisely evaluate productivity.";
+      let photo = document.createElement("img");
+      photo.setAttribute(
+        "src",
+        "https://tmetric.com/media/1kxfndjp/img-advantages.svg"
+      );
+      image1.append(photo);
+    });
+    div2.addEventListener("click", () => {
+      image1.innerHTML = null;
+      pera.innerHTML = null;
+      div2.style.background = "#e7edfc";
+      div2.style.borderColor = "#3070f0";
+      pera2.innerText =
+        "Create projects, set rates and budgets. Keep tracking of hours spent on tasks and see the project progress at a glance, collaborate easily, keep deadlines and prevent over budgeting .";
+      let photo = document.createElement("img");
+      photo.setAttribute(
+        "src",
+        "https://tmetric.com/media/epxhwygn/img-advantages-project-management.svg"
+      );
+      image1.append(photo);
+    });
+    div3.addEventListener("click", () => {
+      image1.innerHTML = null;
+      // div2.innerHTML=null
+      div3.style.background = "#e7edfc";
+      div3.style.borderColor = "#3070f0";
+      pera3.innerText =
+        "Measure productivity and activity level of your team, assign tasks in a click, monitor workflow and distribute the workload. Syncs your teams’ work and improves efficiency..";
+      let photo = document.createElement("img");
+      photo.setAttribute(
+        "src",
+        "https://tmetric.com/media/ef3fhhpb/img-advantages-team-management.svg"
+      );
+      image1.append(photo);
+    });
+
+    div4.addEventListener("click", () => {
+      image1.innerHTML = null;
+      pera4.innerHTML = null;
+      div4.style.background = "#e7edfc";
+      div4.style.borderColor = "#3070f0";
+      pera4.innerText =
+        "With the accurate billing system, set billable rates and easily create an invoice based on tracked time and expenses, and get paid promptly..";
+      let photo = document.createElement("img");
+      photo.setAttribute(
+        "src",
+        "https://tmetric.com/media/hoqdfeg5/img-advantages-invoice.svg"
+      );
+      image1.append(photo);
+    });
+    div5.addEventListener("click", () => {
+      image1.innerHTML = null;
+      pera5.innerHTML = null;
+      div5.style.background = "#e7edfc";
+      div5.style.borderColor = "#3070f0";
+      pera5.innerText =
+        "With a flexible reporting system, you have a choice to get insights into your projects and team productivity, analyze incomes and keep costs under control";
+      let photo = document.createElement("img");
+      photo.setAttribute(
+        "src",
+        "https://tmetric.com/media/dc0o2m4j/img-advantages-reporting.svg"
+      );
+      image1.append(photo);
+    });
+
+    div6.addEventListener("click", () => {
+      image1.innerHTML = null;
+      pera.innerHTML = null;
+      div6.style.background = "#e7edfc";
+      div6.style.borderColor = "#3070f0";
+      pera6.innerText =
+        "Add a PTO policy for your organization, simply ask for days off, control missed workdays, manage balances and teams attendance hassle-free.";
+      let photo = document.createElement("img");
+      photo.setAttribute(
+        "src",
+        "https://tmetric.com/media/eovjubmf/img-advantages-time-off.svg"
+      );
+      image1.append(photo);
+    });
+  </script>
+</html>
