@@ -27,216 +27,209 @@
         background-color: rgb(249, 236, 156);
       }
 
-      :root{
-    --white: #f9f9f9;
-    --black: #36383F;
-    --grey: #85888C;
-}
+      :root {
+        --white: #f9f9f9;
+        --black: #36383f;
+        --grey: #85888c;
+      }
 
-/* Reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      a {
+        text-decoration: none;
+      }
 
-a{
-    text-decoration: none;
-}
-
-ul{
-    list-style: none;
-}
-ul li{
- 
-    font-weight: bold;
-
-}
-/* Header */
-.header{
-  
-   
-    position: sticky;
-    top: 0;
-    height: 100;
-    width: 100%;
-}
-
-/* Logo */
-.logo{
-    display: inline-block;
-    color: var(--white);
-    font-size: 60px;
-    margin-left: 10px;
-
-}
-.navbar-nav .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-}
-.signupBtn{
-  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 75%;
-    min-width: 800px;
-  
-
-}
-.bb_button {
-    border:2px solid #3070F0; 
-    text-decoration: none;
-    border-radius: 12px;
-   height: 20;
-    z-index: 1;
-  }
-  .bb_button:before, .bb_button:after {
-    content: '';
-    background: #15315A;
-    position: absolute;
-    z-index: -1;
-    transition: transform .2s ease-in-out;
-  }
-  bb_button:hover .bb_button__text {
-    opacity: 1;
-
-  }
-  .bb_button:hover {
-    background-color: #3070F0;
-    color: #fff;
-    font-style: bold;
-  }
-
-/* Nav menu */
-.nav{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: var(--black);
-    overflow: hidden;
-    
-}
-
-.menu a{
-    
-    display: block;
-    padding: 30px;
-    /* color: white; */
-    /* color: var(--black); */
-    background-color: rgb(249, 236, 156);
-
-}
-
-.menu a:hover{
-    background-color: var(--grey);
-}
-
-.nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
-}
-
-/* Menu Icon */
-
-.hamb{
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
-}
-
-
-.hamb-line {
-    background: var(--black);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-    
-}
-
-.hamb-line::before,
-.hamb-line::after{
-    background: var(--black);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.hamb-line::before{
-    top: 5px;
-}
-
-.hamb-line::after{
-    top: -5px;
-}
-
-
-.side-menu {
-    display: none;
-}
-
-/* Toggle menu icon */
-
-.side-menu:checked ~ nav{
-    max-height: 100%;
-}
-
-.side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-}
-
-.side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-
-}
-
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
-}
-
-
-/* Responsiveness */
-
-@media (min-width: 900px) {
-    .nav{
-        max-height: none;
+      ul {
+        list-style: none;
+      }
+      ul li {
+        font-weight: bold;
+      }
+      /* Header */
+      .header {
+        position: sticky;
         top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        /* background-color: transparent; */
+        height: 100;
+        width: 100%;
+      }
 
-    }
-
-    .menu li{
-        float: left;
-    }
-
-    .menu a:hover{
-        background-color: transparent;
-        color: var(--grey);
-        
-    }
-    
-    .hamb{
-        display: none;
-    }
+      /* Logo */
+      .logo {
+        display: inline-block;
+        color: var(--white);
+        font-size: 60px;
+        margin-left: 10px;
+      }
+      .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .signupBtn {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-around; */
+        /* width: 85%; */
+        /* min-width: 800px; */
+      }
+      .bb_button {
+        /* border:2px solid #3070F0;  */
+        /* width: 50px;
+     height: 2px;  */
+        text-decoration: none;
+        /* border-radius: 12px; */
+        /* height: 10; */
+        z-index: 1;
+      }
       
-  
+      .bb_button:before,
+      .bb_button:after {
+        content: "";
+        /* background: #15315a; */
+        position: absolute;
+        z-index: -1;
+        transition: transform 0.2s ease-in-out;
+      }
+      .bb_button:hover .bb_button__text {
+        opacity: 1;
+        /* width: 15px;
+    height: 15px; */
+        /* border: 2px solid red; */
+        /* margin: 10px; */
+        /* padding: 10px; */
+        /* background-color: #3070f0; */
+        color:#3070f0 
+        ;
+      }
 
+      .bb_button__text:hover{
+color: #3070F0;
+      }
+      .bb_button:hover {
+        /* background-color: #3070f0; */
+        /* color: #fff; */
+        font-style: bold;
+        color:#3070f0 
+      }
 
-}
+      /* Nav menu */
+      .nav {
+        width: 100%;
+        /* height: 100%; */
+        position: fixed;
+        /* background-color: var(--black); */
+        overflow: hidden;
+      }
+
+      .menu a {
+        display: block;
+        padding: 30px;
+        /* color: white; */
+        /* color: var(--black); */
+        background-color: rgb(249, 236, 156);
+      }
+
+      .menu a:hover {
+        background-color: var(--grey);
+      }
+
+      .nav {
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+      }
+
+      /* Menu Icon */
+
+      .hamb {
+        cursor: pointer;
+        float: right;
+        padding: 40px 20px;
+      }
+
+      .hamb-line {
+        background: var(--black);
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 24px;
+      }
+
+      .hamb-line::before,
+      .hamb-line::after {
+        background: var(--black);
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+      }
+
+      .hamb-line::before {
+        top: 5px;
+      }
+
+      .hamb-line::after {
+        top: -5px;
+      }
+
+      .side-menu {
+        display: none;
+      }
+
+      /* Toggle menu icon */
+
+      .side-menu:checked ~ nav {
+        max-height: 100%;
+      }
+
+      .side-menu:checked ~ .hamb .hamb-line {
+        background: transparent;
+      }
+
+      .side-menu:checked ~ .hamb .hamb-line::before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+
+      .side-menu:checked ~ .hamb .hamb-line::after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      /* Responsiveness */
+
+      @media (min-width: 900px) {
+        .nav {
+          max-height: none;
+          top: 0;
+          position: relative;
+          float: right;
+          width: fit-content;
+          /* background-color: transparent; */
+        }
+
+        .menu li {
+          float: left;
+        }
+
+        .menu a:hover {
+          background-color: transparent;
+          color: var(--grey);
+        }
+
+        .hamb {
+          display: none;
+        }
+      }
 
       /* Write all necessery styles here  */
 
-      #container {
+      #container1 {
         /* font-size: 45px; */
         background-color: rgb(249, 236, 156);
       }
@@ -251,9 +244,11 @@ ul li{
       }
       #heading {
         margin-top: 150px;
-        margin: left 10px;
+        /* margin: left 10px; */
+        margin-left: 10px;
         /* text-align: center; */
         width: 40%;
+        padding: 20px;
       }
       #heading input {
         margin-top: 20px;
@@ -278,8 +273,8 @@ ul li{
 
       #imeg {
         text-align: center;
-        width: 70%;
-        margin-top: 60px;
+        width: 80%;
+        margin-top: 90px;
       }
 
       #imeg img {
@@ -342,6 +337,7 @@ ul li{
         border: 2px solid rgb(240, 240, 240);
         border-radius: 10px;
         /* text-align: center; */
+        padding: 10px;
         width: 100%;
       }
       .sun p {
@@ -497,9 +493,8 @@ ul li{
       .center > p {
         text-align: center;
       }
-      .center a:hover{
+      .center a:hover {
         cursor: pointer;
-
       }
 
       /* for medium querise+++++++++++++++ */
@@ -511,7 +506,7 @@ ul li{
           width: 100%;
         }
         #top > #heading {
-          width: 100%;
+          width: 90%;
           /* margin-left: 30%; */
           text-align: center;
         }
@@ -559,6 +554,21 @@ ul li{
           /* margin-left: 30%; */
           /* text-align: center; */
         }
+        .center {
+       
+       grid-template-columns: repeat(2, 1fr);
+      
+       width: 100%;
+       
+     }
+     .foot {
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       /* justify-content: space-between; */
+       margin: auto;
+       /*  */
+     }
       }
       /* for small queises++++++++++++++++++++ */
       @media all and (max-width: 601px) and (min-width: 200px) {
@@ -569,7 +579,7 @@ ul li{
           width: 100%;
         }
         #top > #heading {
-          width: 100%;
+          width: 90%;
           margin-right: 10%;
           text-align: center;
         }
@@ -609,45 +619,468 @@ ul li{
           /* margin-left: 30%; */
           /* text-align: center; */
         }
+        .center {
+       
+        grid-template-columns: repeat(2, 1fr);
+       
+        width: 100%;
+        
       }
+      .foot {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* justify-content: space-between; */
+        margin: auto;
+        /*  */
+      }
+      }
+
+
+      .title {
+    display: block;
+    margin-bottom: 8px;
+    font-family: PTRootUIBold,sans-serif;
+    color: #212529;
+    transition: color .5s ease;
+}
+.links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  .category{    display: block;
+    margin-bottom: 16px;
+    font: 500 1.25rem/1.2 ObjectivityMedium,sans-serif;
+    color: #a4a9b2;
+}
+.info {
+    flex-grow: 1;
+}
+      .dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.icon{
+  margin-right: 16px;
+    display: block;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    fill: #777e85;
+}
+.dropbtn:hover {
+ color: #3070F0;
+}
+.link-more {
+  margin-left: 200px;
+  display: inline-block;
+    vertical-align: top;
+    font-family: PTRootUIBold,sans-serif;
+    color: #3070f0;
+    transition: all .5s ease;
+}
+.drop {
+  margin-left: 200px;
+   justify-content: space-around;
+   display: flex;
+   flex-direction: row;
+}
+.drop .links.with-icons {
+ 
+    margin: 0 -20px 6px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.drop .links.with-icons li {
+
+    padding: 0 20px;
+    width: 33.333%;
+    
+}
+.btn-holder {
+    margin-bottom: 0.625rem;
+    display: flex;
+    align-items: center;
+    height: auto;
+    max-width: 530px;
+}
+.page-heading .btn, .page-heading .notification .container .notification-action button, .notification .container .notification-action .page-heading button {
+    margin-bottom: 1.875rem;
+    min-width: 200px}
+.btn-primary {
+    background: #3070f0;
+    /* padding-left: 1.5rem;
+    padding-right: 1.5rem; */
+    padding: 20px;
+}
+.btn-note {
+    padding-left: 20px;
+    flex-grow: 1;
+    color: #4c5157;
+    line-height: 1.2;
+}
+.drop .links.with-icons a {
+    display: flex;
+}
+.drop .links li {
+    margin-bottom: 16px;
+}
+.links li a:hover
+{
+  color: #3070F0;
+}
+.input-group {
+  margin-left: 10px;
+    max-width: 450px;
+    margin-bottom: 0.625rem;
+    position: relative;
+    height: 100px;
+}
+.drop .links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container {
+  flex-direction: row;
+  display: flex;
+  margin-top: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.text{
+      display: block;
+    color: #4c5157;
+    line-height: 1.375;
+}
+.title a:hover{
+    color: #3070f0;
+}
+.links .with-icons
+{
+  margin: 0 -20px 6px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.dropdown {
+  position: relative;
+ 
+}
+.link-more .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+    fill: #3070f0;
+    transition: fill .5s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 20px;
+  width: 100%;
+
+}
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 80px;
+  width: 100%;
+
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+ 
+}
+
+.input-group-append {
+    display: flex;
+} 
+.input-group .input-group-text {
+    background: #fff;
+    margin-left: 10px;
+}
+.input-group #email-input {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+.form-control {
+    position: relative;
+    flex: 1 1 auto;
+    width: 40%;
+    border: none;
+    height: 20px;
+    border: none;
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+/* .dropdown a:hover {background-color: #ddd;} */
+
+.show {display: block;}
+
     </style>
   </head>
   <body>
-    <div id="container">
-      <!----header--->
-      <div id="menubar">
-        <header class="header">
-      <!-- Logo -->
-      <img class="logo" src="logi.svg"/>
+    <div id="container1">
+    <!----header--->
+    <div id="menubar">
+      <header class="header">
+    <!-- Logo -->
+    <img class="logo" src="logi.svg"/>
 
-      <!-- Hamburger icon -->
-      <input class="side-menu" type="checkbox" id="side-menu"/>
-      <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
 
-      <!-- Menu -->
-      <nav class="nav">
+    <!-- Menu -->
+    <nav class="nav">
+      <div >
+      
+        
+        <ul class="menu dropdown">
        
-          <ul class="menu">
-         
-            <li><a href="#"><span>Why TMetric</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></li> 
-            <li><a href="#"><span>Apps &amp; Integrations</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></li> 
-            <li><a href="#">Pricing</a></li> 
-            <li><a href="#">Support</a></li> 
-            <li><a href="#">Blog</a></li> 
-            
-            <li class="nav-item">
-              <a class="nav-link login" href="https://app.tmetric.com/login">Log In</a>
-          </li>
+          <li ><a ><span  onclick="myFunction()"  class="dropbtn" >Why TMetric</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></li> 
+          
+          <li><a href="#"><span  onclick="myFunction2()"  class="dropbtn">Apps &amp; Integrations</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></li> 
+          <li><a href="#">Pricing</a></li> 
+          <li><a href="#">Support</a></li> 
+          <li><a href="#">Blog</a></li> 
           
           <li class="nav-item">
-            <a href="#" class="bb_button"><span class="bb_button__text">Sign Up</span></a>
-              <!-- <a class="signupBtn" href="https://app.tmetric.com/register">Sign Up</a> -->
-          </li>
-          </ul>
-         
-      </nav>
-  </header>
+            <a class="nav-link login" href="https://app.tmetric.com/login">Log In</a>
+        </li>
+        
+        <li >
+          <a href="#" class="signupBtn"><span class="bb_button__text">Sign Up</span></a>
+            <!-- <a class="signupBtn" href="https://app.tmetric.com/register">Sign Up</a> -->
+        </li>
+        </ul>
+       
+    </nav>
+</header>
+
+<!---------dropdown why tmetric-->
+<div id="myDropdown" class="dropdown-content">
+  <div class="drop">
+    <div class="container">
+        <!-- dropdown box left column begin -->
+        <div class="links-column">
+            <div class="column">
+                <strong class="category">Overview</strong>
+                <ul class="links">
+
+                        <li>
+                            <a href="/solutions">
+                                <strong class="title">Industry</strong>
+                                <span class="text">Made for all industries. Check benefits of usage</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/customer-stories">
+                                <strong class="title">Customers</strong>
+                                <span class="text">See why business use TMetric for time tracking and workflow management</span>
+                            </a>
+                        </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- dropdown box left column end -->
+        <!-- dropdown box right column begin -->
+        <div class="list-column">
+            <strong class="category">Features</strong>
+            <ul class="links with-icons">
+
+                    <li >
+                        <a href="/feature-time-tracking">
+                            <img class="icon" src="./timer.svg" alt="" />
+                            <span class="info">
+                                <strong class="title">Time Tracking</strong>
+                                <span class="text">Capture and control every task you work on</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/feature-billing">
+                            <img class="icon" src="./team.svg" alt="" />
+                            <span class="info">
+                                <strong class="title">Billing &amp; Invoicing</strong>
+                                <span class="text">Set billable rates and easily create invoices</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/feature-projects">
+                            <img class="icon" src="./team.svg" alt="" />
+                            <span class="info">
+                                <strong class="title">Project Management</strong>
+                                <span class="text">Create projects, set rates and budgets</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/feature-team-management">
+                            <img class="icon" src="./team.svg" alt="" />
+                            <span class="info">
+                                <strong class="title">Team Management</strong>
+                                <span class="text">Monitor productivity and activity level of your team</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/task-management">
+                            <img class="icon" src="./team.svg" alt="" />
+                            <span class="info">
+                                <strong class="title">Task Management</strong>
+                                <span class="text">Manage tasks and set up an effective workflow</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/feature-time-off">
+                            <img class="icon" src="./team.svg" alt="" />
+                            <span class="info">
+                                <strong class="title">Time Off</strong>
+                                <span class="text">Simply ask for days off and control teams attendance</span>
+                            </span>
+                        </a>
+                    </li>
+
+            </ul>
+            <a href="/features" ><span class="link-more">View All Features </span> <i class="fa fa-arrow-right"  style="color:#3070f0" class="icon"></i>
+        </div>
+        <!-- dropdown box right column end -->
+    </div>
+    
+
+</div>
+
+</div>
+    </div>
+     <!---------dropdown app-->
+<div id="myDropdown2" class="dropdown-content2">
+<!-- dropdown box begin -->
+<div class="drop">
+  <div class="container">
+      <!-- dropdown box left column begin -->
+      <div class="links-column">
+          <div class="column">
+              <strong class="category">Apps</strong>
+              <ul class="links">
+
+                      <li>
+                          <a href="/download#browser-extensions-section">
+                              <strong class="title">Browser Extensions</strong>
+                              <span class="text">Simple time tracking extension which helps you be more productive</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="/download#mobile-apps-section">
+                              <strong class="title">Mobile apps</strong>
+                              <span class="text">Install TMetric app to your phone or a tablet device. Android and iOS platforms are supported.</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="/download">
+                              <strong class="title">Desktop apps</strong>
+                              <span class="text">Download TMetric app for your desktop computer or a laptop</span>
+                          </a>
+                      </li>
+
+              </ul>
+          </div>
       </div>
+      <!-- dropdown box left column end -->
+      <!-- dropdown box right column begin -->
+      <div class="list-column">
+          <strong class="category">Integrations</strong>
+          <ul class="links with-icons">
+
+                  <li>
+                      <a href="/integrations/jira-time-tracking">
+                          <img class="icon" src="icon-jira-small.svg" alt="" />
+                          <span class="info">
+                              <strong class="title">Jira</strong>
+                              <span class="text">Time tracking on every task in one click</span>
+                          </span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/integrations/asana-time-tracking">
+                          <img class="icon" src="icon-asana-small.svg" alt="" />
+                          <span class="info">
+                              <strong class="title">Asana</strong>
+                              <span class="text">Start to accurately track time of tasks</span>
+                          </span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/integrations/todoist-time-tracking">
+                          <img class="icon" src="icon-todoist-small.svg" alt="" />
+                          <span class="info">
+                              <strong class="title">Todoist</strong>
+                              <span class="text">Track time of your lists and tasks</span>
+                          </span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/integrations/microsoft-office-online-time-tracking-tmetric">
+                          <img class="icon" src="icon-ms-office-small.svg" alt="" />
+                          <span class="info">
+                              <strong class="title">MS Office</strong>
+                              <span class="text">Get plugin for tracking time in MS Office Online</span>
+                          </span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/integrations/github-time-tracking">
+                          <img class="icon" src="icon-github-small.svg" alt="" />
+                          <span class="info">
+                              <strong class="title">GitHub</strong>
+                              <span class="text">Track time spent working on an issue with one mouse click</span>
+                          </span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/integrations/freshdesk-time-tracking">
+                          <img class="icon" src="icon-freshdesk-small.svg" alt="" />
+                          <span class="info">
+                              <strong class="title">Freshdesk</strong>
+                              <span class="text">Track time spent on every support ticket</span>
+                          </span>
+                      </a>
+                  </li>
+
+          </ul>
+          <a href="/integrations" class="link-more">View All Integrations <i class="fa fa-arrow-right"  style="color:#3070f0" class="icon"></i></a>
+      </div>
+      <!-- dropdown box right column end -->
+  </div>
+</div>
+<!-- dropdown box end -->
+
+
+  <!-- <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact">Contact</a> -->
+</div>
       <!-- main contIN++++++++++++++++++++++++ -->
 
       <div id="top">
@@ -852,6 +1285,14 @@ ul li{
   </body>
 
   <script>
+// let ajaytayde=document.getElementById("header")
+// ajaytayde.addEventListener("click", () => {
+//    alert("ajay")
+//   console.log("ajay")
+// });
+
+
+
     let div1 = document.getElementById("sun1");
     let div2 = document.getElementById("sun2");
     let div3 = document.getElementById("sun3");
@@ -957,5 +1398,53 @@ ul li{
       );
       image1.append(photo);
     });
+    function myFunction() {
+     
+     document.getElementById("myDropdown").classList.toggle("show");
+     document.getElementById("myDropdown2").classList.toggle("hide");
+     document.getElementById("myDropdown2").classList.remove('show')
+   }
+   
+   
+   
+   function myFunction2() {
+        
+        document.getElementById("myDropdown").classList.toggle("hide");
+        document.getElementById("myDropdown").classList.remove('show')
+        document.getElementById("myDropdown2").classList.toggle("show");
+      }
+   window.onclick = function(event) {
+     if (!event.target.matches('.dropbtn')) {
+       var dropdowns = document.getElementsByClassName("dropdown-content");
+       var dropdowns2 = document.getElementsByClassName("dropdown-content2");
+       var i;
+       for (i = 0; i < dropdowns.length; i++) {
+         var openDropdown = dropdowns[i];
+         if (openDropdown.classList.contains('show')) {
+           openDropdown.classList.remove('show');
+         }
+       }
+       for (i = 0; i < dropdowns2.length; i++) {
+         var openDropdown = dropdowns2[i];
+         if (openDropdown.classList.contains('show')) {
+           openDropdown.classList.remove('show');
+         }
+       }
+     }
+   }
+     </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    // function myFunction() {
+    //   var x = document.getElementById("myTopnav");
+    //   if (x.className === "topnav") {
+    //     x.className += " responsive";
+    //   } else {
+    //     x.className = "topnav";
+    //   }
+    // }
+    // myFunction();
+
+
   </script>
 </html>
