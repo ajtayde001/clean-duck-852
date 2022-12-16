@@ -25,6 +25,7 @@
         display: inline-block;
         position: fixed;
         background-color: rgb(249, 236, 156);
+        border: 2px solid red;
       }
 
       :root {
@@ -232,6 +233,7 @@ color: #3070F0;
       #container1 {
         /* font-size: 45px; */
         background-color: rgb(249, 236, 156);
+        /* border: 2px solid red; */
       }
       /* for top++++++++++++++++++++++++ */
       #top {
@@ -751,6 +753,7 @@ color: #3070F0;
   margin-top: 40px;
     justify-content: space-between;
     align-items: flex-start;
+    border: 2px solid red;
 }
 .text{
       display: block;
@@ -836,9 +839,9 @@ color: #3070F0;
     </style>
   </head>
   <body>
-    <div id="container1">
+    <div id="container1" >
     <!----header--->
-    <div id="menubar">
+    <div id="menubar" onscroll="myscroll()">
       <header class="header">
     <!-- Logo -->
     <img class="logo" src="logi.svg"/>
@@ -862,11 +865,11 @@ color: #3070F0;
           <li><a href="#">Blog</a></li> 
           
           <li class="nav-item">
-            <a class="nav-link login" href="https://app.tmetric.com/login">Log In</a>
+            <a class="nav-link login" href="login.html">Log In</a>
         </li>
         
         <li >
-          <a href="#" class="signupBtn"><span class="bb_button__text">Sign Up</span></a>
+          <a href="singup.html" class="signupBtn"><span class="bb_button__text">Sign Up</span></a>
             <!-- <a class="signupBtn" href="https://app.tmetric.com/register">Sign Up</a> -->
         </li>
         </ul>
@@ -1285,13 +1288,33 @@ color: #3070F0;
   </body>
 
   <script>
-// let ajaytayde=document.getElementById("header")
-// ajaytayde.addEventListener("click", () => {
+ //let ajaytayde=document.getElementById("container1")
+// ajaytayde.addEventListener("scroll", () => {
 //    alert("ajay")
 //   console.log("ajay")
+// });{
+
+function myscroll(){
+  // var myNav = document.getElementById('menubar');
+
+//   window.onscroll = function () { 
+//     if (document.body.scrollTop >= 200 ) {
+//         myNav.classList.add("nav-colored");
+//         myNav.classList.remove("nav-transparent");
+//     } 
+//     else {
+//         myNav.classList.add("nav-transparent");
+//         myNav.classList.remove("nav-colored");
+//     }
+// };
+alert()
+}
+
+
+  
+// ajaytayde.addEventListener("scroll",()=>{
+//   alert("ajay")
 // });
-
-
 
     let div1 = document.getElementById("sun1");
     let div2 = document.getElementById("sun2");
@@ -1309,12 +1332,12 @@ color: #3070F0;
     let image1 = document.getElementById("img1");
     // pera=document.querySelectorAll("p")
     div1.addEventListener("click", () => {
-      image1.innerHTML = null;
-      pera2.innerHTML,
-        pera3.innerHTML,
-        pera4.innerHTML,
-        pera5.innerHTML,
-        (div6.innerHTML = null);
+      // image1.innerHTML = null;
+      // pera2.innerHTML,
+      //   pera3.innerHTML,
+      //   pera4.innerHTML,
+      //   pera5.innerHTML,
+      //   (div6.innerHTML = null);
       div1.style.background = "#e7edfc";
       div1.style.borderColor = "#3070f0";
       pera.innerText =
@@ -1398,6 +1421,9 @@ color: #3070F0;
       );
       image1.append(photo);
     });
+
+
+    // dropdowns part++++++++++++++++++++++++++++++++++++++++++++++++
     function myFunction() {
      
      document.getElementById("myDropdown").classList.toggle("show");
@@ -1432,18 +1458,13 @@ color: #3070F0;
        }
      }
    }
+  
+
      </script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    // function myFunction() {
-    //   var x = document.getElementById("myTopnav");
-    //   if (x.className === "topnav") {
-    //     x.className += " responsive";
-    //   } else {
-    //     x.className = "topnav";
-    //   }
-    // }
-    // myFunction();
+   
+<!-- +++++++++++++++++++++++++++++++login part+++++++++++++++++++++ -->
 
 
   </script>
