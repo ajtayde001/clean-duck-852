@@ -163,33 +163,21 @@
       e.preventDefault();
       for(let i=0; i<=data.length-1; i++){
   if(data[i].email==form.email.value && data[i].password==form.password.value){
+    heading.style.color="green"
     heading.innerText="Sign in Successful"
   }
   if(data[i].emai!=form.email.value && data[i].password!=form.password.value){
-    heading.innerText="Wrong Credentials"
+    heading.style.color="red"
+    heading.innerText="Wrong Credentials!"
+
   }
 }
+form.email.value=null
+   form.password.value=null
     //   console.log(myForm)
     });
 
-    //     let data= JSON.parse(localStorage.getItem("account-data"));
-    //  console.log(data)
-    // let form= document.querySelector("form");
-    // let heading=document.getElementById("heading")
-
-    // form.addEventListener("submit",(e)=>{
-    // e.preventDefault();
-
-    // for(let i=0; i<=data.length-1; i++){
-
-    //   if(data[i].email==form.email.value && data[i].password==form.password.value){
-    //     heading.innerText="Sign in Successful"
-    //   }else{
-    //     heading.innerText="Wrong Credentials"
-    //   }
-    // }
-
-    // })
+    
   </script>
 </html>
 
