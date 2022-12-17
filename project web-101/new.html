@@ -21,11 +21,12 @@
         margin: 0;
       }
       #menubar {
+        font-family: PTRootUIMedium,sans-serif;
         width: 100%;
         display: inline-block;
         position: fixed;
         background-color: rgb(249, 236, 156);
-        border: 2px solid red;
+        /* border: 2px solid red; */
       }
 
       :root {
@@ -232,7 +233,7 @@ color: #3070F0;
 
       #container1 {
         /* font-size: 45px; */
-        background-color: rgb(249, 236, 156);
+        background-color: rgb(244, 234, 173);
         /* border: 2px solid red; */
       }
       /* for top++++++++++++++++++++++++ */
@@ -253,6 +254,8 @@ color: #3070F0;
         padding: 20px;
       }
       #heading input {
+        padding: 10px;
+        width: 250px;
         margin-top: 20px;
         margin-bottom: 10px;
       }
@@ -264,7 +267,7 @@ color: #3070F0;
         margin-top: 20px;
       }
       #heading button {
-        margin-top: 20px;
+        margin-bottom: 20px;
         color: white;
         background-color: rgb(64, 111, 239);
         width: 130px;
@@ -282,6 +285,7 @@ color: #3070F0;
       #imeg img {
         width: 100%;
       }
+
       input[type="checkbox"] {
         display: none;
       }
@@ -318,6 +322,8 @@ color: #3070F0;
       #img1 {
         text-align: center;
         width: 50%;
+        margin-top: 80px;
+        /* border: 2px solid red; */
       }
 
       #img1 img {
@@ -351,7 +357,9 @@ color: #3070F0;
           rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
           rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       }
-
+      .onHover:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
       /* 4th part+++++++++++++++++++++++++++++++++++++ */
       #top2 {
         display: flex;
@@ -498,7 +506,16 @@ color: #3070F0;
       .center a:hover {
         cursor: pointer;
       }
-
+      #shortcut{
+        display: grid;
+        grid-template-columns:repeat(6,1fr);margin-left: 9%;margin-right: 9%;padding-top: 3%;
+        gap: 15px;
+        margin-bottom: 20px;
+        }
+        #shortcut2{
+            display: grid;
+            grid-template-columns:repeat(5,1fr);text-align: center;padding-top: 2%;padding-left: 20%;padding-right: 20%;
+        }
       /* for medium querise+++++++++++++++ */
       @media all and (max-width: 900px) and (min-width: 600px) {
         #top {
@@ -571,6 +588,14 @@ color: #3070F0;
        margin: auto;
        /*  */
      }
+     #shortcut{
+        display: grid;
+        grid-template-columns:repeat(4 ,1fr);margin-left: 9%;margin-right: 9%;padding-top: 3%;
+        }
+        #shortcut2{
+            display: grid;
+            grid-template-columns:repeat(3,1fr);text-align: center;padding-top: 2%;padding-left: 20%;padding-right: 20%;
+        }
       }
       /* for small queises++++++++++++++++++++ */
       @media all and (max-width: 601px) and (min-width: 200px) {
@@ -636,14 +661,22 @@ color: #3070F0;
         margin: auto;
         /*  */
       }
+      #shortcut{
+        display: grid;
+        grid-template-columns:repeat(2 ,1fr);margin-left: 9%;margin-right: 9%;padding-top: 3%;
+        }
+        #shortcut2{
+            display: grid;
+            grid-template-columns:repeat(2,1fr);text-align: center;padding-top: 2%;padding-left: 20%;padding-right: 20%;
+        }
       }
 
 
-      .title {
+    .title {
     display: block;
     margin-bottom: 8px;
     font-family: PTRootUIBold,sans-serif;
-    color: #212529;
+    color: black
     transition: color .5s ease;
 }
 .links {
@@ -753,14 +786,14 @@ color: #3070F0;
   margin-top: 40px;
     justify-content: space-between;
     align-items: flex-start;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .text{
       display: block;
     color: #4c5157;
     line-height: 1.375;
 }
-.title a:hover{
+.title>a:hover{
     color: #3070f0;
 }
 .links .with-icons
@@ -831,6 +864,9 @@ color: #3070F0;
     min-width: 0;
     margin-bottom: 0;
 }
+title:hover{
+  color: #3070F0;
+}
 
 /* .dropdown a:hover {background-color: #ddd;} */
 
@@ -844,7 +880,7 @@ color: #3070F0;
     <div id="menubar" onscroll="myscroll()">
       <header class="header">
     <!-- Logo -->
-    <img class="logo" src="logi.svg"/>
+    <a href="new.html"><img class="logo" src="logi.svg" /></a>
 
     <!-- Hamburger icon -->
     <input class="side-menu" type="checkbox" id="side-menu"/>
@@ -888,13 +924,13 @@ color: #3070F0;
                 <ul class="links">
 
                         <li>
-                            <a href="/solutions">
+                            <a href="singup.html">
                                 <strong class="title">Industry</strong>
                                 <span class="text">Made for all industries. Check benefits of usage</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/customer-stories">
+                            <a href="singup.html">
                                 <strong class="title">Customers</strong>
                                 <span class="text">See why business use TMetric for time tracking and workflow management</span>
                             </a>
@@ -910,7 +946,7 @@ color: #3070F0;
             <ul class="links with-icons">
 
                     <li >
-                        <a href="/feature-time-tracking">
+                        <a href="singup.html">
                             <img class="icon" src="./timer.svg" alt="" />
                             <span class="info">
                                 <strong class="title">Time Tracking</strong>
@@ -919,7 +955,7 @@ color: #3070F0;
                         </a>
                     </li>
                     <li>
-                        <a href="/feature-billing">
+                        <a href="singup.html">
                             <img class="icon" src="./team.svg" alt="" />
                             <span class="info">
                                 <strong class="title">Billing &amp; Invoicing</strong>
@@ -928,7 +964,7 @@ color: #3070F0;
                         </a>
                     </li>
                     <li>
-                        <a href="/feature-projects">
+                        <a href="singup.html">
                             <img class="icon" src="./team.svg" alt="" />
                             <span class="info">
                                 <strong class="title">Project Management</strong>
@@ -937,7 +973,7 @@ color: #3070F0;
                         </a>
                     </li>
                     <li>
-                        <a href="/feature-team-management">
+                        <a href="singup.html">
                             <img class="icon" src="./team.svg" alt="" />
                             <span class="info">
                                 <strong class="title">Team Management</strong>
@@ -946,7 +982,7 @@ color: #3070F0;
                         </a>
                     </li>
                     <li>
-                        <a href="/task-management">
+                        <a href="singup.html">
                             <img class="icon" src="./team.svg" alt="" />
                             <span class="info">
                                 <strong class="title">Task Management</strong>
@@ -955,7 +991,7 @@ color: #3070F0;
                         </a>
                     </li>
                     <li>
-                        <a href="/feature-time-off">
+                        <a href="singup.html">
                             <img class="icon" src="./team.svg" alt="" />
                             <span class="info">
                                 <strong class="title">Time Off</strong>
@@ -987,19 +1023,19 @@ color: #3070F0;
               <ul class="links">
 
                       <li>
-                          <a href="/download#browser-extensions-section">
+                          <a href="singup.html">
                               <strong class="title">Browser Extensions</strong>
                               <span class="text">Simple time tracking extension which helps you be more productive</span>
                           </a>
                       </li>
                       <li>
-                          <a href="/download#mobile-apps-section">
+                          <a href="singup.html">
                               <strong class="title">Mobile apps</strong>
                               <span class="text">Install TMetric app to your phone or a tablet device. Android and iOS platforms are supported.</span>
                           </a>
                       </li>
                       <li>
-                          <a href="/download">
+                          <a href="singup.html">
                               <strong class="title">Desktop apps</strong>
                               <span class="text">Download TMetric app for your desktop computer or a laptop</span>
                           </a>
@@ -1092,9 +1128,10 @@ color: #3070F0;
           <p>
             TMetric streamlines your team work so you can focus on what matters
           </p>
+          <img src="" alt="">
           <input type="email" placeholder="Enter Your Email Adress" />
           <div>
-            <button>Get Staretd</button>
+            <a href="singup.html"><button>Get Staretd</button></a>
             <p>Fully Functional 30-Day Trial</p>
           </div>
         </div>
@@ -1242,7 +1279,68 @@ color: #3070F0;
         />
       </div>
     </div>
-
+  </div>
+  <h2 style="text-align:center;margin-left:25%;margin-right:25%;margin-top:5%;font-size: 55px;">Integrate time tracker tool with 50+ popular services</h2>
+  <h3 style="text-align:center">TMetric integrates with dozens of services, which lets you measure progress and activity in any tool you use.</h3>
+  <button style="font-size: 25px;padding: 9px 9px 9px 9px;border-radius: 5px;margin-left: 35%; color: aliceblue;background-color: blue;border-color: blue;">Start Free Trial</button>
+  <a href="#">Explore All Integrations </a>
+  <div>
+  
+  
+      <div id="shortcut">
+              
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="	https://tmetric.com/media/cshbmvwf/logo-integration-gsuite.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/fnbggshs/logo-integration-msoffice.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/plvb1mg0/logo-integration-gkeep.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/smflyk5w/logo-integration-github.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/kbrcntmi/logo-integration-excel.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/4aeci1fh/logo-integration-asana.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/caxbzjss/logo-integration-jira.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/dw2nwjwv/logo-integration-gitlab.svg" alt="">
+      </div>
+      
+  
+     
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/me5ih5eu/logo-integration-gdocs.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/0bzmfrlf/logo-integration-trello.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/sdaj41fi/logo-integration-redmine.svg" alt="">
+      </div>
+  
+      <div  class="onHover" style="background-color: white; width: 140px; height: 140px;border-radius: 10%;" >
+          <img style="padding: 50px ;padding-left: 9px ;"  src="https://tmetric.com/media/1xedbfav/logo-integration-zendesk.svg" alt="">
+      </div>
+  
+     
+  </div>
     <!-- 6th part+++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <div id="lastm">
       <h1>Make time work for you!</h1>

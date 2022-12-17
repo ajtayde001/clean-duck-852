@@ -122,7 +122,7 @@ a{
 
 
 <img src="https://id.tmetric.com/images/tmetric_logo_and_text.svg" alt="">
-<h2>Create Your Account</h2>
+<h2 id="head">Create Your Account</h2>
 <div id="id01" class="modal">
   
   <form class="modal-content">
@@ -155,13 +155,14 @@ a{
     let form= document.querySelector("form")
     let input= document.querySelector("input")
     let signupbtn= document.getElementById("signupbtn")
+    let head= document.getElementById("head")
   
     
     let data= JSON.parse(localStorage.getItem("account-data"));
     if(data==null){
       data=[]
     }
-    input.innerHTML=null
+    // form.innerHTML=null
     signupbtn.addEventListener("click",(e)=>{
     e.preventDefault();
     let myForm={
@@ -173,8 +174,13 @@ a{
     data.push(myForm);
     localStorage.setItem("account-data",JSON.stringify(data));
    console.log(data)
-  
+   
+   form.name.value=null
+   form.email.value=null
+   form.password.value=null
 // console.log(myForm)
+head.style.color="green"
+   head.innerText= "Account Creating Successfully"
     });
   
   
